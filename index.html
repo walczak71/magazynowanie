@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
     <title>Magazynowanie</title>
 </head>
 <body>
     <h1>Magazynowanie</h1>
     <div class="container">
-        <button id="viewList">Lista produktów</button>
-        <button id="addRemove">Dodaj/Usuń produkty</button>
         <button id="exportButton">Eksport</button>
     </div>
 
-    <form id="inventoryForm" style="display: none;">
+    <form id="inventoryForm">
         <input type="text" id="product" placeholder="Nazwa produktu" required>
         <input type="number" id="quantity" placeholder="Ilość" required>
         <button type="submit">Dodaj</button>
