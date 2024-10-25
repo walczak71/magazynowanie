@@ -1,73 +1,44 @@
-/* Stylizacja podstawowa */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Ogólne style */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f4f9;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
+    background-color: #f3f3f3;
+  }
+  
+  .container {
     text-align: center;
-    margin: 20px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    width: 200px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3b3b3b;
-    color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  /* Style kafelków */
+  .tile {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 1.2em;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-ul {
-    list-style: none;
-    margin: 20px 0;
-}
-
-li {
-    padding: 10px;
-    background-color: #ececec;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #3b3b3b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
+  }
+  
+  /* Style dla większych ekranów */
+  @media (min-width: 769px) {
+    .tile {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  }
+  
