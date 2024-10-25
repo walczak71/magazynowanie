@@ -11,19 +11,32 @@ document.getElementById("inventoryForm").addEventListener("submit", function(eve
 });
 
 // Funkcja dodająca produkt do magazynu i zapisująca go w localStorage
+// Funkcja dodająca produkt do magazynu i zapisująca go w localStorage
 function addToInventory(product, quantity) {
     const inventory = JSON.parse(localStorage.getItem("inventory")) || [];
     const existingProduct = inventory.find(item => item.product === product);
 
     if (existingProduct) {
+        // Jeśli ilość po aktualizacji będzie poniżej 0, wyświetl ostrzeżenie
+        if (existingProduct.quantity + quantity < 0) {
+            alert(`Nie masz tyle ${product} baranie!`);
+            return; // Przerwij, jeśli ilość byłaby ujemna
+        }
         existingProduct.quantity += quantity;
     } else {
-        inventory.push({ product, quantity });
+        // Dodaj nowy produkt, tylko jeśli ilość jest większa od 0
+        if (quantity > 0) {
+            inventory.push({ product, quantity });
+        } else {
+            alert("Nie można dodać produktu z ujemną ilością!");
+            return; // Przerwij, jeśli próbujemy dodać produkt z ujemną ilością
+        }
     }
     
     localStorage.setItem("inventory", JSON.stringify(inventory));
     updateInventoryList();
 }
+
 
 // Funkcja aktualizująca listę produktów
 function updateInventoryList() {
