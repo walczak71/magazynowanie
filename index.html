@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory App</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-
-    <link rel="manifest" href="manifest.json">
+    <title>Magazynowanie</title>
 </head>
 <body>
-    <h1>Zarządzanie zapasami</h1>
+    <h1>Magazynowanie</h1>
     <div class="container">
-        <div class="card" id="viewList">Lista produktów</div>
-        <div class="card" id="addRemove">Dodaj/Usuń produkty</div>
-        <div class="card" id="exportButton">Eksport</div>
+        <button id="viewList">Lista produktów</button>
+        <button id="addRemove">Dodaj/Usuń produkty</button>
+        <button id="exportButton">Eksport</button>
     </div>
+
+    <form id="inventoryForm" style="display: none;">
+        <input type="text" id="product" placeholder="Nazwa produktu" required>
+        <input type="number" id="quantity" placeholder="Ilość" required>
+        <button type="submit">Dodaj</button>
+    </form>
+
+    <ul id="productList"></ul>
+
     <script src="app.js"></script>
 </body>
 </html>
