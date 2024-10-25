@@ -8,9 +8,9 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "icons/ckp.png",
+            "src": "icons/192x192.png",
             "type": "image/png",
-            "sizes": "144x144"
+            "sizes": "192x192"
         }
     ]
    
