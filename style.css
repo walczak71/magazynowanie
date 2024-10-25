@@ -88,4 +88,10 @@ button:hover {
         width: 80%;
         margin: 10px 0;
     }
+    #inventoryForm {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 1rem;
+    }
 }
