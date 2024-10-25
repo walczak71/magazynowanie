@@ -17,7 +17,22 @@
     </div>
 
     <form id="inventoryForm">
-        <input type="text" id="product" placeholder="Nazwa produktu" required>
+        <select id="product" required>
+            <option value="" disabled selected>Wybierz produkt</option>
+            <option value="Produkt A">Reader RFID</option>
+            <option value="Produkt B">Detacher RFID</option>
+            <option value="Produkt C">Pager</option>
+            <option value="Produkt C">Pilot 4 kanały</option>
+            <option value="Produkt C">Pilot 2 kanały</option>
+            <option value="Produkt C">Hyperguard centralka</option>
+            <option value="Produkt C">Hyperguard płytka</option>
+            <option value="Produkt C">CPiD</option>
+            <option value="Produkt C">Zasilacz 24V</option>
+            <option value="Produkt C">Zasilacz 12V</option>
+            <option value="Produkt C">Wirama 2000</option>
+            <option value="Produkt C">Router GSM</option>
+            <!-- Dodaj więcej produktów według potrzeb -->
+        </select>
         <input type="number" id="quantity" placeholder="Ilość" required>
         <button type="submit">Aktualizuj</button>
     </form>
