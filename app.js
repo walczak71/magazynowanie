@@ -1,4 +1,6 @@
 // Obsługa formularza dodawania produktów
+
+
 document.getElementById("inventoryForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const product = document.getElementById("product").value;
